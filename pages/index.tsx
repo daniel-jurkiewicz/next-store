@@ -1,6 +1,7 @@
 import Header from "../components/Header";
-import Main from "../components/Main";
 import Footer from "../components/Footer";
+import { Main } from "../components/Main";
+import { Product } from "../components/Product";
 
 const DATA = {
     header: "Lorem ipsum dolor",
@@ -12,44 +13,13 @@ const DATA = {
     rating: 4.5,
 };
 
-interface RatingProps {
-    rating: number;
-}
-
-const Rating = ({ rating }: RatingProps) => {
-    return <span className="text-sm font-bold">Rating: {rating}</span>;
-};
-
-interface ProductProps {
-    data: {
-        header: string;
-        description: string;
-        imageUrl: string;
-        imageAlt: string;
-        rating: number;
-    };
-}
-
-const Product = ({ data }: ProductProps) => {
-    return (
-        <>
-            <img src={data.imageUrl} alt={data.imageAlt} />
-            <div>
-                <h1 className="text-xl uppercase mb-2">{data.header}</h1>
-                <p className="mb-2">{data.description}</p>
-                <Rating rating={data.rating} />
-            </div>
-        </>
-    );
-};
-
 const Home = () => {
     return (
-        <div className="flex flex-col bg-teal-100 min-h-screen">
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-grow content-start max-w-2xl mx-auto grid p-6 gap-6 sm:grid-cols-2">
+            <Main>
                 <Product data={DATA} />
-            </main>
+            </Main>
             <Footer />
         </div>
     );

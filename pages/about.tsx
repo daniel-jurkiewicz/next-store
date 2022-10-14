@@ -1,11 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Main } from "../components/Main";
 
 const AboutPage = () => {
     return (
         <>
             <Header />
-            <main>About Us Section</main>
+            <Main>About Us Section</Main>
             <Footer />
         </>
     );
