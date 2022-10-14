@@ -3,12 +3,16 @@ import Link from "next/link";
 const Header = () => {
     return (
         <header className="w-full mx-auto">
-            <nav className="bg-gray-700 text-white px-4 py-2">
+            <nav className="bg-gray-800 text-white px-4 py-3">
                 <Link href="/">
-                    <a>Main</a>
+                    <a className="inline-block rounded bg-slate-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-slate-500 mr-3">
+                        Home
+                    </a>
                 </Link>
                 <Link href="/about">
-                    <a className="ml-2">About Us</a>
+                    <a className="inline-block rounded bg-slate-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-slate-500">
+                        Products
+                    </a>
                 </Link>
             </nav>
         </header>
