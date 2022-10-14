@@ -1,12 +1,14 @@
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+
 const Home = () => {
     return (
-        <>
-            <header>
-                <nav className="bg-gray-500">Navigation</nav>
-            </header>
-            <main>Content</main>
-            <footer className="bg-gray-500">Footer</footer>
-        </>
+        <div className="flex flex-col bg-teal-100 min-h-screen">
+            <Header />
+            <Main />
+            <Footer />
+        </div>
     );
 };
 
