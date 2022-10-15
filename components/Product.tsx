@@ -23,15 +23,13 @@ export const Product = ({ data }: ProductProps) => {
                         />
                     </picture>
                     <div className="p-6">
-                        <h5 className="text-gray-900 text-xl font-medium mb-2">
+                        <h5 className="text-gray-900  text-xl font-medium mb-2">
                             {data.header}
                         </h5>
-                        <p className="text-gray-700 text-base mb-4">
+                        <p className="text-gray-700 text-justify text-base mb-4">
                             {data.description}
                         </p>
-                        <p className="text-gray-600 font-bold text-sm">
-                            Rating: {data.rating}
-                        </p>
+                        <Rating rating={data.rating} />
                     </div>
                 </div>
             </div>
